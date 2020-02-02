@@ -8,7 +8,9 @@
 2. Better bus user experience
 3. Increase mass transit usage
 4. Increase relevant data to PATransit to adjust routes accordingly
+![](project_goals.png)
 ![](buscrowd2020.png)
+
 
 ##### Example screenshot:
 ![](buscrowd_screenshot1.png)
