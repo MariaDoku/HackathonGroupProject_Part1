@@ -1,0 +1,114 @@
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Bus Capacity Check</title> <!--browser tab dis[lay-->
+        <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+  </head>
+  <body bgcolor = 'light blue'>
+      <header>
+      </header>
+      <section>
+      </section>
+      <script>
+      //const x = {"foo": "bar"}
+      const y = {
+        "site_name": "Port Authority Bus Capacity Checker",
+        "data_location":
+          {
+            "city" : "Pittsburgh",
+            "state" : "Pennsylvania",
+            "country": "United States"
+          },
+        "busNumber" : "71B",
+       "bus71B_data" :[
+          {
+               "stop_name" : [
+                 "HIGHLAND AVE AT FIFTH AVE FS",
+                 "FIFTH AVE AT OAKLAND AVE",
+                 "HIGHLAND AVE AT PENN AVE",
+                 "FIFTH AVE AT MOREWOOD AVE",
+                 "FIFTH AVE AT CRAIG ST NS" ]
+          },
+          {
+             "user_time" : [
+              "12:00:00",
+              "13:15:00",
+              "15:36:00",
+              "7:19:00",
+              "9:48:00" ]
+          },
+          {
+              "current_bus_capacity" :[
+              "Full",
+              "Not Full",
+              "Full",
+              "Full",
+              "Full"  ]
+          }
+        ]
+      }
+      //console.log(x);
+      console.log(y);
+        const header = document.querySelector('header');
+        const section = document.querySelector('section');
+        //let requestURL = 'http://www.pitt.edu/~dme32/busdata.json'; //getting values from JSON file
+        //let requestURL = 'file:///busdata.json';
+        //let request = new XMLHttpRequest(); //request obj
+        //var request = 'busdata.json'
+        //request.open('GET', requestURL);
+        //request.open('GET', request);
+        //request.responseType = 'json';
+        //request.send();
+        //request.onload = function() {
+            //const busData = request.response;
+            const headerDisplay = y['site_name'];
+            const myH1 = document.createElement('h1');
+            //myH1.textContent = jsonObj['site_name'];
+            myH1.textContent = headerDisplay;
+            header.appendChild(myH1);
+            // populateHeader(busData);
+            //show(busData);
+          //}
+            //function that will fill the header with site name
+          //  function populateHeader(jsonObj) {
+            //    const myH1 = document.createElement('h1');
+              //  myH1.textContent = jsonObj['site_name'];
+              //  header.appendChild(myH1);
+              const locationInfo = y['data_location'];
+              const myPara = document.createElement('p');
+              myPara.textContent = locationInfo['city'] + ', ' + locationInfo['state'] + ', ' + locationInfo['country'];
+              header.appendChild(myPara);
+              //}
+              const paraBus = document.createElement('h2');
+              paraBus.textAlign='center';
+              paraBus.textContent = y['busNumber'];
+              section.appendChild(paraBus);
+              const busData = y['bus71B_data'][0];
+              const stopName = busData['stop_name'];
+              const userTime = busData['user_time'];
+              const busCapacity = busData['current_bus_capacity'];
+            //function show(jsonObj) {
+          //for (var i = 0; i < busData.length; i++) {
+                 //const myArticle = document.createElement('article');
+                 const busStopText = document.createElement('h2');
+                 const userTimeText = document.createElement('p');
+                 const busCapacityText = document.createElement('p')
+          //        const myPara3 = document.createElement('p');
+                 userTimeText.textContent = 'Time: ' +  userTime[0];
+                 busStopText.textContent = 'Bus Stop: ' + stopName[0];
+                 busCapacityText.textContent = 'Bus Status: ' +  busCapacity[0];
+        //          }
+//
+                section.appendChild(userTimeText);
+                section.appendChild(busStopText);
+                section.appendChild(busCapacityText);
+    //            myArticle.appendChild(myPara1);
+      //          myArticle.appendChild(myPara2);
+        //        myArticle.appendChild(myPara3);
+                //section.appendChild(myArticle);
+              //}
+      </script>
+  </body>
+</html>
+

@@ -1,0 +1,42 @@
+const y = {
+        "site_name": "Port Authority Bus Capacity Checker",
+        "data_location":
+          {
+            "city" : "Pittsburgh",
+            "state" : "Pennsylvania",
+            "country": "United States"
+          },
+        "busNumber" : "71B",
+        "bus71B_data" :[
+          {
+               "bus_direction" : [
+                 "INBOUND",
+                 "OUTBOUND" ]
+          },
+          {
+               "stop_name" : [
+                 "HIGHLAND AVE AT FIFTH AVE FS",
+                 "FIFTH AVE AT OAKLAND AVE",
+                 "HIGHLAND AVE AT PENN AVE",
+                 "FIFTH AVE AT MOREWOOD AVE",
+                 "FIFTH AVE AT CRAIG ST NS" ]
+          },
+          {
+                "user_time" : [
+                 "12:00:00",
+                 "13:15:00",
+                 "15:36:00",
+                 "7:19:00",
+                 "9:48:00" ]
+          },
+          {
+                "current_bus_capacity" :[
+                 "Full",
+                 "Not Full",
+                 "Standing Room Only",
+                 "Full",
+                 "Full"  ]
+          }
+        ]
+      }
+
