@@ -19,7 +19,7 @@
 ![](project_goals.png)
 
 ##### Example screenshot:
-![](buscrowd_screenshot1.png)
+![](Screen Shot 2020-02-02 at 9.12.57 AM.png)
 
 
 ###### flowchart:
